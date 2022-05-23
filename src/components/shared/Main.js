@@ -1,10 +1,16 @@
 //Main Page for this app will have folder of sublevel components
-import React from 'react'
+function Main(props) {
 
-function Main() {
-  return (
-    <div>Main</div>
-  )
+  let chargerName = props.stations.town
+  console.log(chargerName)
+
+  if(chargerName) {
+    return <h2>{props.stations.town}</h2>
+  }else {
+    return <h2>Loading...</h2>
+  }
+
+  
 }
 
 export default Main
